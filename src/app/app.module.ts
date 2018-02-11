@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InstructionsComponent } from './components/instructions/instructions.component';
-import { SubmitComponent } from './components/submit/submit.component';
 import { RidesComponent } from './components/rides/rides.component';
 
 
@@ -18,7 +17,6 @@ import { RidesComponent } from './components/rides/rides.component';
     AppComponent,
     DashboardComponent,
     InstructionsComponent,
-    SubmitComponent,
     RidesComponent
   ],
   imports: [

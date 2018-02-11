@@ -1,4 +1,4 @@
-.container {
+form {
   margin: 0px auto;
   width: 70%;
   padding:4px;
@@ -47,6 +47,29 @@ input[type="radio"]{
 background-color: red;
 }
 
+/* submit */
+
+.input-group {
+  margin: 0px auto;
+  border-radius: 0;
+}
+
+::-webkit-input-placeholder { 
+  color:#000;
+  text-transform: uppercase;
+  padding:4px;
+  font-size: 0.8em;
+}
+
+.myBtn{
+  background-color: #4c4c4b;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
 @media screen and (max-width: 699px) {
   .container {
     margin: 0px auto;

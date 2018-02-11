@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { RideService } from './../../services/ride.service';
 import { Ride } from './../../models/Ride';
 
@@ -12,6 +12,9 @@ export class RidesComponent implements OnInit {
   rides: Ride[];
   stripColor:{};
   selectedColor:{};
+  pin: Ride;
+  @ViewChild('pinForm') form: any;
+
 
   constructor(private rideService: RideService) {
 
@@ -27,7 +30,7 @@ export class RidesComponent implements OnInit {
     //     zone: {
     //     id: 2,
     //     name: "Gibbon Island",
-    //     color: "#e76f68"
+    //     color: "#e76f6 8"
     //     },
     //     name: "Treetop Adventure",
     //     remainingTickets: 30,
@@ -77,5 +80,10 @@ export class RidesComponent implements OnInit {
     // this.selectedColor = {
     //   'background-color': this.rides.zone.color
     // }
+  }
+
+  onSubmit({value, valid}: {value: Ride, valid: boolean}) {
+    console.log(value);     
+    this.form.reset();
   }
 }
