@@ -1,13 +1,17 @@
+import { Ride } from './../../models/Ride';
 import { Component, OnInit } from '@angular/core';
-import { Ride } from '../../models/Ride';
 
 @Component({
   selector: 'app-rides',
   templateUrl: './rides.component.html',
   styleUrls: ['./rides.component.css']
 })
+
 export class RidesComponent implements OnInit {
   rides: Ride[];
+  stripColor:{};
+  selectedColor:{};
+
   constructor() { }
 
   ngOnInit() {
@@ -56,7 +60,16 @@ export class RidesComponent implements OnInit {
         remainingTickets: 5,
         returnTime: new Date('01/02/2018 08:35:05')
         }
-    ]
+    ];
+    this.setColor();
   }
 
+  setColor() {
+    // this.stripColor = {
+    //   'background-color': this.rides.zone.color
+    // }
+    // this.selectedColor = {
+    //   'background-color': this.rides.zone.color
+    // }
+  }
 }

@@ -2,7 +2,6 @@
   margin: 0px auto;
   width: 70%;
   padding:4px;
-
 }
 
 .card {
@@ -12,7 +11,6 @@
 }
 
 .card-header {
-  background-color: red;
   padding: 0.15rem 1.25rem;
 }
 
@@ -38,6 +36,15 @@ h5 {
   padding:0;
   font-size:0.8em;
   color:#656565;
+}
+
+input[type="radio"]{
+  position:fixed;
+  opacity:1;
+}
+
+.card:selected{
+background-color: red;
 }
 
 @media screen and (max-width: 699px) {
