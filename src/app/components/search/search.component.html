@@ -1,6 +1,18 @@
-<form class="mt-3" action="">
-    <div class="input-group" fxFlex="60%" fxLayout="row" fxLayout.xs="row">
-        <input type="text" class="form-control" placeholder="&nbsp;#pin" aria-describedby="submit-pin">
-        <button class="myBtn" id="submit-pin">submit</button>
-      </div>
-</form>
+<form #pinForm="ngForm" (ngSubmit)="onSubmit(pinForm)" class="mt-3">
+  <div class="input-group input-group-md" fxFlex="60%" fxLayout="row" fxLayout.xs="row">
+    <input
+     type="text" 
+     [(ngModel)]="pin"
+     [ngClass]="{'is-invalid': ridePin.errors && ridePin.touched}" class="form-control"
+     name="pin" 
+     #ridePin="ngModel" 
+     placeholder="&nbsp;#pin" 
+     aria-describedby="submit-pin" 
+     required 
+     minlength="2">
+    <span class="input-group-btn">
+      <button [disabled]="!pinForm.form.valid" class="myBtn" id="submit-pin">submit</button>
+    </span>
+  </div>
+  <div class="invalid-feedback" [hidden]="!ridePin.errors?.required"> Pin number is required </div>
+</form> 
