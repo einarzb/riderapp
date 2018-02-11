@@ -1,3 +1,10 @@
+.container {
+  margin: 0px auto;
+  width: 70%;
+  padding:4px;
+
+}
+
 .card {
   max-width: 150px;
   height: 160px;
@@ -29,5 +36,13 @@ h5 {
 
 .ico-text{
   padding:0;
-   font-size:0.8em;
+  font-size:0.8em;
+  color:#656565;
+}
+
+@media screen and (max-width: 699px) {
+  .container {
+    margin: 0px auto;
+    width: 100%;
+  }
 }
