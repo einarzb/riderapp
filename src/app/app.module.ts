@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InstructionsComponent } from './components/instructions/instructions.component';
-import { SearchComponent } from './components/search/search.component';
+import { SubmitComponent } from './components/submit/submit.component';
 import { RidesComponent } from './components/rides/rides.component';
 
 
@@ -16,7 +16,7 @@ import { RidesComponent } from './components/rides/rides.component';
     AppComponent,
     DashboardComponent,
     InstructionsComponent,
-    SearchComponent,
+    SubmitComponent,
     RidesComponent
   ],
   imports: [

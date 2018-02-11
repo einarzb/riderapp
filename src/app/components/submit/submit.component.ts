@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  selector: 'app-submit',
+  templateUrl: './submit.component.html',
+  styleUrls: ['./submit.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SubmitComponent implements OnInit {
   pin: string;
   @ViewChild('pinForm') form: any;
 
