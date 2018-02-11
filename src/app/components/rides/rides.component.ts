@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { RideService } from './../../services/ride.service';
 import { Ride } from './../../models/Ride';
 
 @Component({
@@ -9,20 +9,18 @@ import { Ride } from './../../models/Ride';
 })
 
 export class RidesComponent implements OnInit {
-  // rides: Ride[];
-  rides = '';
+  rides: Ride[];
   stripColor:{};
   selectedColor:{};
 
-  constructor(private http:HttpClient) {
+  constructor(private rideService: RideService) {
 
    }
 
-  ngOnInit(): void {
-    this.http.get('http://fast-rider.herokuapp.com/api/v1/rides?token=d624351447c3d210a922fa846d3c13ce288b7a41cf').subscribe(data => {
-      console.log(data);
-    });
-  
+  ngOnInit() {
+    this.rideService.getRides().subscribe(rides => 
+      this.rides = rides);
+    
     // this.rides = [
     //   {
     //     id: 9,
