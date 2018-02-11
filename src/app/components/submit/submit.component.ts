@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Ride } from '../../models/Ride';
 
 @Component({
   selector: 'app-submit',
@@ -6,7 +7,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./submit.component.css']
 })
 export class SubmitComponent implements OnInit {
-  pin: string;
+  pin: Ride;
   @ViewChild('pinForm') form: any;
 
   constructor() { }
@@ -15,7 +16,7 @@ export class SubmitComponent implements OnInit {
    
   }
 
-  onSubmit({value, valid}: {value: pin, valid: boolean}) {
+  onSubmit({value, valid}: {value: Ride, valid: boolean}) {
       console.log(value);     
       this.form.reset();
     }
