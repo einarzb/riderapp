@@ -1,6 +1,6 @@
-input {
-  /* width: 500px; */
-  height: 40px;
+
+.input-group {
+  margin: 0px auto;
 }
 
 ::-webkit-input-placeholder { 
@@ -10,14 +10,16 @@ input {
   font-size: 0.8em;
 }
 
+.input-group-addon {
+  border: 2px solid red;
+}
+
 .myBtn{
   background-color: #4c4c4b;
   border: none;
-  padding: 3px;
   text-transform: uppercase;
   color: #fff;
-  font-size: 1em;
-  margin-left: -5px;
-  width:100px;
-  height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.8rem;
 }
