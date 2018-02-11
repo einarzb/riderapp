@@ -15,16 +15,20 @@
         <button [disabled]="!pinForm.form.valid" class="myBtn" id="submit-pin">submit</button>
       </span>
     </div>
-    <div class="invalid-feedback" [hidden]="!ridePin.errors?.required"> Pin number is required </div> 
+    <div class="row invalid-feedback input-group" [hidden]="!ridePin.errors?.required"> PIN number is required </div> 
 <div class="row mt-4 input-group">
-      <ul class="list-unstyled">
+  <!-- fxLayout="row" fxLayout.xs="row" fxFlex="100%" fxLayoutAlign="center center" fxLayoutGap="10px" fxLayoutGap.xs="10px" -->
+      <ul class="list-unstyled" fxLayout="row" fxFlex="100%" fxLayout.xs="column">
         <li class="card mb-2" *ngFor="let ride of rides" [ngStyle]="selectedColor">
-          <input type="radio" name="rides" value="{{ride.name}}">
+          <!-- <input 
+          type="radio" 
+          name="rides" 
+          value="{{ride.name}}"> -->
           <!-- TODO: card header background color is data passed from the JSON {{ride.zone.color}} finish ngStyle-->
           <div class="card-header" [ngStyle]="stripColor"> </div>
           <p class="card-text"> {{ride.zone.name}} </p>
           <h5> {{ride.name}} </h5>
-          <div class="row mt-4" fxLayout fxLayout.xs="row" fxLayoutAlign="center center" fxLayoutGap="25px" fxLayoutGap.xs="20px">
+          <div class="row mt-4" fxLayout fxLayout.xs="row" fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.xs="20px">
             <div>
               <img class="small-ico" src="../../assets/ico-g-03.svg" alt="" />
               <span class="ico-text"> {{ride.returnTime | date:"shortTime" }} </span>
