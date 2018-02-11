@@ -1,6 +1,6 @@
 form {
   margin: 0px auto;
-  width: 100%;
+  max-width: 100%;
   padding:4px;
 }
 
@@ -75,11 +75,15 @@ background-color: red;
 @media screen and (max-width: 699px) {
   form {
     margin: 0px auto;
-    width: 100%;
+    /* flex: 80%;
+    width:400px; */
+    max-width: 93%;
   }
   .card {
-    max-width:100px;
-    height: 160px;
-    background-color: #373737;
+    width: 47%;
+    height:39%;
+  }
+  h5 {
+    font-size: 0.80rem;
   }
 }
