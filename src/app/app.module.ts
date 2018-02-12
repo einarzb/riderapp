@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InstructionsComponent } from './components/instructions/instructions.component';
 import { RidesComponent } from './components/rides/rides.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { TicketComponent } from './components/ticket/ticket.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppComponent,
     DashboardComponent,
     InstructionsComponent,
-    RidesComponent
+    RidesComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,
