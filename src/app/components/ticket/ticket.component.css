@@ -3,7 +3,7 @@ p {
   line-height: 15px;
   font-size: 12px;
   text-align: justify;
-  width: 100%;
+  width: 70%;
 }
 .flex-item1{
   max-width: 50%;
@@ -40,7 +40,6 @@ img {
 .card-text {
   color:#656565;
   font-size: 0.7em;
-  /* text-align: right; */
 }
 
 .small-ico {

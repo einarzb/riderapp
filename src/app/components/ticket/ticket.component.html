@@ -1,6 +1,6 @@
 <div class="container mt-4" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px" fxLayoutGap.xs="0">
 
-  <div class="flex-item1" fxFlex="45%" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px"
+  <div class="flex-item1" fxFlex="40%" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px"
     fxLayoutGap.xs="0">
     <div class="round">
       <img src="../../assets/ico-04.svg" alt="" />
@@ -14,17 +14,15 @@
     fxLayoutGap.xs="0">
     <ul fxFlex="100%" fxLayoutAlign="center center">
       <li class="card" *ngFor="let ride of rides">
-
         <div class="card-header" [ngStyle]="{'background-color': ride.zone.color}"> </div>
-
-        <p class="card-text mt-2" fxLayoutAlign="space-between center" fxLayoutGap="20px" fxLayoutGap.xs="20px">
+        <div class="card-text mt-2" fxLayoutAlign="space-around center" fxLayoutGap="30px" fxLayoutGap.xs="20px">
           <span class="text-white">{{ride.name}}</span> {{ride.zone.name}}
-        </p>
-        <p class="card-text mt-3" fxLayoutAlign="center center"> Return At</p>
+        </div>
+        <div class="card-text mt-3" fxLayoutAlign="center center"> Return At</div>
         <span class="text-white">
           {{ride.returnTime | date:"shortTime" }}
         </span>
-        <p class="card-text mt-2" fxLayoutAlign="center center"> Use Access Code</p>
+        <div class="card-text mt-2" fxLayoutAlign="center center"> Use Access Code</div>
         <span class="text-white mt-2.5"> 11-4586-99 </span>
         <!-- TODO: should be access code from tickets api -->
       </li>
