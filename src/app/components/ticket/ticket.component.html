@@ -1,14 +1,33 @@
-<div class="container mt-4" fxLayout fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px" fxLayoutGap.xs="0">
-    <div class="flex-item1" fxFlex="25%" fxLayout="column"
-    fxLayout.xs="column"
-    fxLayoutAlign="center center"
-    fxLayoutGap="10px"
+<div class="container mt-4" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+
+  <div class="flex-item1" fxFlex="45%" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px"
     fxLayoutGap.xs="0">
     <div class="round">
       <img src="../../assets/ico-04.svg" alt="" />
     </div>
     <p class="text-center">
-      Thank you for using The Jungle<sup>&trade;</sup> FastRider ticket system - your access code is now ready! 
+      Thank you for using The Jungle
+      <sup>&trade;</sup> FastRider ticket system - your access code is now ready!
     </p>
   </div>
+<div class="flex-item2" fxFlex="25%" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px"
+fxLayoutGap.xs="0">
+  <ul fxFlex="100%" fxLayoutAlign="center center">
+  <li class="card" *ngFor="let ride of rides">
+      <!-- <input 
+        type="radio" 
+        name="rides" 
+        value="{{ride.name}}"> -->
+      <div class="card-header" [ngStyle]="{'background-color': ride.zone.color}"> </div>
+      <p class="card-text mt-2" fxLayoutAlign="space-between center" fxLayoutGap="20px" fxLayoutGap.xs="20px"> <span>{{ride.name}}</span> {{ride.zone.name}} </p>
+   
+      <p class="card-text mt-2" fxLayoutAlign="center center"> Return At</p>
+      <span class="" fxLayout fxLayout.xs="column" fxLayoutAlign="center center"> {{ride.returnTime | date:"shortTime" }} </span>
+      <p class="card-text" fxLayoutAlign="center center"> Use Access Code</p>
+      <span class=""> 11-4586-99 </span>
+      <!-- TODO: should be access code from tickets api -->
+    </li>
+  </ul>
 </div>
+</div>
+
