@@ -4,7 +4,7 @@
     <input type="text" style="border-radius: 0" [(ngModel)]="pin" [ngClass]="{'is-invalid': ridePin.errors && ridePin.touched}"
       class="form-control" name="pin" #ridePin="ngModel" placeholder="&nbsp;#pin" aria-describedby="submit-pin" required>
     <span class="input-group-btn">
-      <button [disabled]="!pinForm.form.valid" class="myBtn" id="submit-pin">submit</button>
+      <button routerLink="/ticket" [disabled]="!pinForm.form.valid" class="myBtn" id="submit-pin">submit</button>
     </span>
   </div>
   <div class="row invalid-feedback input-group" [hidden]="!ridePin.errors?.required"> PIN number is required </div>
