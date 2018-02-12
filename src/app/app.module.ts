@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InstructionsComponent } from './components/instructions/instructions.component';
 import { RidesComponent } from './components/rides/rides.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { TicketComponent } from './components/ticket/ticket.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -17,13 +20,16 @@ import { RidesComponent } from './components/rides/rides.component';
     AppComponent,
     DashboardComponent,
     InstructionsComponent,
-    RidesComponent
+    RidesComponent,
+    TicketComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [RideService],
   bootstrap: [AppComponent]
