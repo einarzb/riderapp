@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InstructionsComponent } from './components/instructions/instructions.component';
 import { RidesComponent } from './components/rides/rides.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { RidesComponent } from './components/rides/rides.component';
     BrowserModule,
     FlexLayoutModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [RideService],
   bootstrap: [AppComponent]
