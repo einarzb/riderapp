@@ -10,8 +10,6 @@ import { Ride } from './../../models/Ride';
 
 export class RidesComponent implements OnInit {
   rides: Ride[];
-  stripColor:{};
-  selectedColor:{};
   pin: Ride;
   @ViewChild('pinForm') form: any;
 
@@ -30,7 +28,7 @@ export class RidesComponent implements OnInit {
         zone: {
         id: 2,
         name: "Gibbon Island",
-        color: "#e76f6 8"
+        color: "#e76f68"
         },
         name: "Treetop Adventure",
         remainingTickets: 30,
@@ -70,16 +68,6 @@ export class RidesComponent implements OnInit {
         returnTime: new Date('01/02/2018 08:35:05')
         }
     ];
-    this.setColor();
-  }
-
-  setColor() {
-    // this.stripColor = {
-    //   'background-color': this.rides.zone.color
-    // }
-    // this.selectedColor = {
-    //   'background-color': this.rides.zone.color
-    // }
   }
 
   onSubmit({value, valid}: {value: Ride, valid: boolean}) {

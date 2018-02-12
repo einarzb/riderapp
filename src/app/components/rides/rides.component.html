@@ -19,13 +19,13 @@
 <div class="row mt-4 input-group">
   <!-- fxLayout="row" fxLayout.xs="row" fxFlex="100%" fxLayoutAlign="center center" fxLayoutGap="10px" fxLayoutGap.xs="10px" -->
       <ul class="list-unstyled" fxLayout="row" fxFlex="100%" fxLayout.xs="column">
-        <li class="card mb-2" *ngFor="let ride of rides" [ngStyle]="selectedColor">
+        <li class="card mb-2" *ngFor="let ride of rides">
           <!-- <input 
           type="radio" 
           name="rides" 
           value="{{ride.name}}"> -->
           <!-- TODO: card header background color is data passed from the JSON {{ride.zone.color}} finish ngStyle-->
-          <div class="card-header" [ngStyle]="stripColor"> </div>
+          <div class="card-header" [ngStyle]="{'background-color': ride.zone.color}"> </div>
           <p class="card-text"> {{ride.zone.name}} </p>
           <h5> {{ride.name}} </h5>
           <div class="row mt-4" fxLayout fxLayout.xs="row" fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.xs="20px">

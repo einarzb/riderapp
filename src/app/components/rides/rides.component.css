@@ -13,7 +13,10 @@ form {
 }
 
 .card-header {
-  padding: 0.15rem 1.25rem;
+  padding: 0.2rem 3.6rem;
+  margin-top: -5px;
+  width: 148px;
+  margin-left: -4px;
 }
 
 .card-text {
@@ -85,5 +88,8 @@ background-color: red;
   }
   h5 {
     font-size: 0.80rem;
+  }
+  .card-header {
+    width: 90%;
   }
 }
