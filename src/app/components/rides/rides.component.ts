@@ -20,12 +20,10 @@ export class RidesComponent implements OnInit {
   constructor(private rideService: RideService, private router:Router) { }
 
   ngOnInit() {
-    // this.rideService.getRides().subscribe(rides => 
-    //   this.rides = rides);
+    this.rideService.getRides().subscribe(res => {
+      for(let i=0; i < res.length; ++i)this.rides.push(res[i]);
+      this.ride_id = this.rides[0].id;
+    })
   }
 
-  onSubmit({value, valid}: {value: Ride, valid: boolean}) {
-    console.log(value);     
-    this.form.reset();
-  }
 }
