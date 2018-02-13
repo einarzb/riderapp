@@ -10,6 +10,22 @@ import { catchError, map, tap } from 'rxjs/operators';
 @Injectable()
 export class RideService {
   rides:Ride[];
+  ticketRes = {
+    "id": 0,
+    "ride": {
+      "id": 0,
+      "zone": {
+        "id": 0,
+        "name": "string",
+        "color": "string"
+      },
+      "name": "string",
+      "remaining_tickets": 0,
+      "return_time": "2018-02-13T09:47:42.949Z"
+    },
+    "access_code": "string",
+    "return_time": "2018-02-13T09:47:42.949Z"
+  }
 
 constructor(private http:HttpClient) { 
   this.http = http;
