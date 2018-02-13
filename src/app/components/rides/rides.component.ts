@@ -17,9 +17,7 @@ export class RidesComponent implements OnInit {
   @ViewChild('pinForm') form: any;
 
 
-  constructor(private rideService: RideService, private router:Router) {
-
-   }
+  constructor(private rideService: RideService, private router:Router) { }
 
   ngOnInit() {
     // this.rideService.getRides().subscribe(rides => 

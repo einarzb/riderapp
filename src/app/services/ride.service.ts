@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import 'rxjs/add/operator/map';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Ride } from './../models/Ride';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+import { catchError, map, tap } from 'rxjs/operators';
+
 
 @Injectable()
 export class RideService {
