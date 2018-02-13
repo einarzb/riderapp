@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { RideService } from './../../services/ride.service';
 import { Ride } from './../../models/Ride';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-rides',
@@ -14,7 +16,7 @@ export class RidesComponent implements OnInit {
   @ViewChild('pinForm') form: any;
 
 
-  constructor(private rideService: RideService) {
+  constructor(private rideService: RideService, private router:Router) {
 
    }
 
