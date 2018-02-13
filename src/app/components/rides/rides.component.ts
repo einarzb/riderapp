@@ -11,8 +11,9 @@ import { Router } from '@angular/router';
 })
 
 export class RidesComponent implements OnInit {
-  rides: Ride[];
-  pin: Ride;
+  rides: Ride[] = [];
+  pin: string;
+  ride_id: number;
   @ViewChild('pinForm') form: any;
 
 
