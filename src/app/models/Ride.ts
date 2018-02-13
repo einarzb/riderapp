@@ -1,8 +1,8 @@
 export interface Ride {
   id: number,
   name: string,
-  remainingTickets: number,
-  returnTime:any,
+  remaining_tickets: number,
+  return_time:any,
   zone: {
     id: number,
     name: string,
