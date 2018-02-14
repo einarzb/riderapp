@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { RideService } from "./../../services/ride.service";
-import { Ride } from "./../../models/Ride";
 import { Router } from "@angular/router";
 
 @Component({
@@ -26,9 +25,7 @@ export class RidesComponent implements OnInit {
           this.parkOpen = false;
           this.parkClosed = true;
         }
-    });
-
-    
+    }});
   }
 
   submitForm() {
