@@ -1,0 +1,2 @@
+1. regex for input to be with dashes (like credit card)
+2. pipe date for the google calendar link 
