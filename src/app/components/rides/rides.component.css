@@ -9,6 +9,7 @@ form {
 .invalid-feedback {
   max-width: 60%;
 }
+
 .card {
   width: 150px;
   padding: 5px;
@@ -123,7 +124,7 @@ h6 {
     font-size: 0.85rem;
   }
   .card-header {
-    width: 90%;
+    width: 100%;
   }
   .card-text {
     font-size: 0.6em;

@@ -13,6 +13,7 @@ import { RidesComponent } from './components/rides/rides.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { RideComponent } from './components/ride/ride.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     InstructionsComponent,
     RidesComponent,
     TicketComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RideComponent
   ],
   imports: [
     BrowserModule,

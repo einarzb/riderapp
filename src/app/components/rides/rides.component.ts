@@ -12,14 +12,21 @@ export class RidesComponent implements OnInit {
   rides: Ride[] = [];
   pin: string;
   ride_id: number;
+  parkOpen: boolean = true;
   @ViewChild("pinForm") form: any;
 
   constructor(private rideService: RideService, private router: Router) {}
 
   ngOnInit() {
     this.rideService.getRides().subscribe(res => {
-      for (let i = 0; i < res.length; ++i) this.rides.push(res[i]);
+      for (let i = 0; i < res.length; ++i) {
+        this.rides.push(res[i]);
+        if(this.rides[i].return_time == null && this.rides[i].remaining_tickets == 0){
+          this.parkOpen = false;
+        }
     });
+
+    
   }
 
   submitForm() {
