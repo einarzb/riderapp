@@ -12,8 +12,8 @@
   </div>
   <div class="flex-item2" fxFlex="25%" fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px"
     fxLayoutGap.xs="0">
-    <ul fxFlex="100%" fxLayoutAlign="center center">
-      <li class="card" *ngFor="let ride of rides">
+    <div fxFlex="100%" fxLayoutAlign="center center">
+      <div class="card" *ngFor="let ride of rides">
         <div class="card-header" [ngStyle]="{'background-color': ride.ride.zone.color}"> </div>
         <div class="card-text mt-2" fxLayoutAlign="space-around center" fxLayoutGap="30px" fxLayoutGap.xs="20px">
           <span class="text-white">{{ride.ride.name}}</span> {{ride.ride.zone.name}}
@@ -24,7 +24,8 @@
         </span>
         <div class="card-text mt-2" fxLayoutAlign="center center"> Use Access Code</div>
         <span class="text-white mt-2.5"> {{ride.access_code}} </span>
-      </li>
-    </ul>
+          <a class="link-info small" href="https://calendar.google.com/calendar/r/eventedit?location=The+Jungle+Park&sprop=name:Einar+Barzilay&sprop=website:https://confident-sammet-771650.netlify.com&details=Please+make+sure+to+arrive+15+minutes+before+your+turn&text=The+Jungle+Ride+Access+Code&dates=20180227T160000Z/20180227T190000Z&sf=true&output=xml"> Add ride to calander</a> 
+      </div>
+    </div>
   </div>
 </div>
