@@ -15,6 +15,7 @@ form {
   margin: 5px;
   height: 160px;
   background-color: #373737;
+  cursor: pointer;
 }
 
 .card-header {
