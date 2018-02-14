@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { RideService } from "./../../services/ride.service";
 import { Router } from "@angular/router";
+import { Ride } from "./../../models/Ride";
 
 @Component({
   selector: "app-rides",
