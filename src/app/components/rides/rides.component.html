@@ -11,10 +11,10 @@
     <div class="row" style="display:flex;" >
       <div *ngFor="let ride of rides;let i = index" (click)="rideClicked(ride.id)">
         <div class="card mb-2">
-            <div class="card-header" [ngStyle]="{'background-color': ride.zone.color"> </div>
+            <div class="card-header" [ngStyle]="{'background-color': ride.zone.color}"> </div>
             <p class="card-text"> {{ride.zone.name}} </p>
             <h5> {{ride.name}} </h5>
-            <div class="row mt-4" fxLayout fxLayout.xs="row" fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.xs="20px">
+            <div class="row mt-4" fxLayout fxLa yout.xs="row" fxLayoutAlign="center center" fxLayoutGap="12px" fxLayoutGap.xs="20px">
               <div>
                 <img class="small-ico" src="../../assets/ico-g-03.svg" alt="" />
                 <span class="ico-text"> {{ride.return_time | date:"shortTime" }} </span>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ride } from './../../models/Ride';
+import { RideService } from '../../services/ride.service';
 
 @Component({
   selector: 'app-ticket',
@@ -7,24 +8,14 @@ import { Ride } from './../../models/Ride';
   styleUrls: ['./ticket.component.css']
 })
 export class TicketComponent implements OnInit {
-  rides: Ride[];
+  rides:{} [] = [];
 
-  constructor() { }
+  constructor(private rideService : RideService) { 
+      this.rides.push(this.rideService.ticketRes)
+  }
 
   ngOnInit() {
-    this.rides = [
-      {
-        id: 9,
-        zone: {
-        id: 2,
-        name: "Gibbon Island",
-        color: "#e76f68"
-        },
-        name: "Treetop Adventure",
-        remainingTickets: 30,
-        returnTime: new Date('01/02/2018 08:35:05')
-        }
-      ]
+    
   }
 
 }

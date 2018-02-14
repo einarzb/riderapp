@@ -47,6 +47,16 @@ export class RideService {
       .pipe(catchError(this.handleError<any>()));
   }
 
+  getAccessCode(data): Observable<any> {
+    return this.http
+      .post<any>(
+        "http://fast-rider.herokuapp.com/api/v1/tickets",
+        data,
+        this.httpOptions
+      )
+      .pipe(catchError(this.handleError<any>()));
+  }
+
   private handleError<T>(operation = "operation", result?: T) {
     return (err: any): Observable<T> => {
       alert(err.error.message);
