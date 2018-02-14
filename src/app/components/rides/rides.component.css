@@ -32,8 +32,10 @@ form {
   padding:5px;
 }
 
-h5 {
+h6 {
   max-width: 100px;
+  height: 40px;
+  vertical-align: middle;
   text-align: center;
   margin: 0px auto;
 }
