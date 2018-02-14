@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { RideService } from "./../../services/ride.service";
 import { Router } from "@angular/router";
 import { Ride } from "./../../models/Ride";
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: "app-rides",
@@ -14,6 +15,7 @@ export class RidesComponent implements OnInit {
   ride_id: number;
   parkOpen: boolean = true;
   parkClosed: boolean = false;
+  subBtn: boolean = false;
   @ViewChild("pinForm") form: any;
 
   constructor(private rideService: RideService, private router: Router) {}
@@ -27,7 +29,16 @@ export class RidesComponent implements OnInit {
           this.parkClosed = true;
         }
     }});
+    if(window.innerWidth > 800 && window.innerHeight > 600){
+      this.subBtn = true;
+    } 
   }
+
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    this.subBtn = true;
+  }  
 
   submitForm() {
     this.rideService

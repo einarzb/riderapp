@@ -103,6 +103,7 @@ h6 {
     height: 40px;
     z-index: 999;
     position: fixed;
+    bottom: 0px;
   }
 
   form {
