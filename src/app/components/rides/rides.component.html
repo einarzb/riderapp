@@ -1,11 +1,13 @@
 <form #pinForm="ngForm" (ngSubmit)="onSubmit(pinForm)" class="mt-3">
-  <div class="bar input-group">
-    <input type="text" style="border-radius: 0" [(ngModel)]="pin" [ngClass]="{'is-invalid': ridePin.errors && ridePin.touched}"
-      class="form-control" name="pin" #ridePin="ngModel" placeholder="&nbsp;#pin" required>
-    <button (click)="submitForm()" class="myBtn">submit</button>
+  <div class="top-wrapper" *ngIf="parkOpen">
+    <div class="bar input-group">
+      <input type="text" style="border-radius: 0" [(ngModel)]="pin" [ngClass]="{'is-invalid': ridePin.errors && ridePin.touched}"
+        class="form-control" name="pin" #ridePin="ngModel" placeholder="&nbsp;#pin" required>
+      <button (click)="submitForm()" class="myBtn">submit</button>
+    </div>
+    <div class="row invalid-feedback input-group mt-2" [hidden]="!ridePin.errors?.required"> PIN number is required </div>
   </div>
-
-  <div class="row invalid-feedback input-group mt-2" [hidden]="!ridePin.errors?.required"> PIN number is required </div>
+  <h5 *ngIf="parkClosed"> We are closed. You are welcome to enjoy our service from 9:00 AM</h5>
 
   <div class="container mt-4 input-group">
     <div class="row" style="display:flex;">
@@ -15,8 +17,8 @@
           <p class="card-text"> {{ride.zone.name}} </p>
           <h6> {{ride.name}} </h6>
 
-          <div class="row mt-4" *ngIf="parkOpen" fxLayout fxLa yout.xs="row"
-            fxLayoutAlign="space-around center" fxLayoutGap="10px" fxLayoutGap.xs="20px">
+          <div class="row mt-4" *ngIf="parkOpen" fxLayout fxLa yout.xs="row" fxLayoutAlign="space-around center" fxLayoutGap="10px"
+            fxLayoutGap.xs="20px">
             <div>
               <img class="small-ico" src="../../assets/ico-g-03.svg" alt="" />
               <span class="ico-text"> {{ride.return_time | date:"shortTime" }} </span>

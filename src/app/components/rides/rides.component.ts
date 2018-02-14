@@ -13,6 +13,7 @@ export class RidesComponent implements OnInit {
   pin: string;
   ride_id: number;
   parkOpen: boolean = true;
+  parkClosed: boolean = false;
   @ViewChild("pinForm") form: any;
 
   constructor(private rideService: RideService, private router: Router) {}
@@ -23,6 +24,7 @@ export class RidesComponent implements OnInit {
         this.rides.push(res[i]);
         if(this.rides[i].return_time == null && this.rides[i].remaining_tickets == 0){
           this.parkOpen = false;
+          this.parkClosed = true;
         }
     });
 
