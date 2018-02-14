@@ -8,5 +8,6 @@ export interface Ride {
     name: string,
     color: string
   },
-  pin?: string
+  pin?: string,
+  isSelected: {}
 }

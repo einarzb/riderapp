@@ -19,7 +19,6 @@ export class RidesComponent implements OnInit {
   ngOnInit() {
     this.rideService.getRides().subscribe(res => {
       for (let i = 0; i < res.length; ++i) this.rides.push(res[i]);
-      this.ride_id = this.rides[0].id;
     });
   }
 
@@ -38,7 +37,13 @@ export class RidesComponent implements OnInit {
       });
   }
 
-  rideClicked(id) {
+  rideClicked(id, index) {
     this.ride_id = id;
+    for (let i = 0; i < this.rides.length; ++i) {
+      this.rides[i].isSelected = {};
+    }
+    this.rides[index].isSelected = {
+      "background-color": this.rides[index].zone.color
+    };
   }
 }

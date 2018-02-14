@@ -9,8 +9,8 @@
 
   <div class="container mt-4 input-group">
     <div class="row" style="display:flex;">
-      <div *ngFor="let ride of rides;let i = index" (click)="rideClicked(ride.id)">
-        <div class="card mb-2">
+      <div *ngFor="let ride of rides;let i = index" (click)="rideClicked(ride.id, i)">
+        <div class="card mb-2" [ngStyle] = "ride.isSelected">
           <div class="card-header" [ngStyle]="{'background-color': ride.zone.color}"> </div>
           <p class="card-text"> {{ride.zone.name}} </p>
           <h6> {{ride.name}} </h6>
