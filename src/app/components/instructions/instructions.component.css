@@ -7,7 +7,7 @@ p {
   color: #656565;
   line-height: 15px;
   font-size: 12px;
-  text-align: justify;
+  text-align: center;
   width: 80%;
 }
 
@@ -25,6 +25,13 @@ img {
   background-position: center center;
 }
 
+.flex-item2{
+  margin-top:-33px !important;
+}
+
+.flex-item3{
+  margin-top:-17px !important;
+}
 
 @media screen and (max-width: 699px) {
   p {
@@ -32,5 +39,12 @@ img {
   }
   .round {
     margin-bottom: 5px !important; 
+  }
+  .flex-item2{
+    margin-top: 0px !important;
+  }
+  
+  .flex-item3{
+    margin-top: 0px !important;
   }
 }
