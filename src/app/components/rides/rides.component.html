@@ -7,7 +7,7 @@
     </div>
     <div class="row invalid-feedback input-group mt-2" [hidden]="!ridePin.errors?.required"> PIN number is required </div>
   </div>
-  <h5 *ngIf="parkClosed"> We are closed. You are welcome to enjoy our service from 9:00 AM</h5>
+  <h5 *ngIf="parkClosed"> We are closed. You are welcome to enjoy our service starting 9:00 AM</h5>
 
   <div class="container mt-4 input-group">
     <div class="row" style="display:flex;">
@@ -20,11 +20,11 @@
           <div class="row mt-4" *ngIf="parkOpen" fxLayout fxLa yout.xs="row" fxLayoutAlign="space-around center" fxLayoutGap="10px"
             fxLayoutGap.xs="20px">
             <div>
-              <img class="small-ico" src="../../assets/ico-g-03.svg" alt="" />
+              <img class="small-ico" src="../../assets/ico-g-03.svg" alt="clock" />
               <span class="ico-text"> {{ride.return_time | date:"shortTime" }} </span>
             </div>
             <div>
-              <img class="small-ico" src="../../assets/ico-g-01.svg" alt="" />
+              <img class="small-ico" src="../../assets/ico-g-01.svg" alt="ticket" />
               <span class="ico-text"> {{ride.remaining_tickets}} </span>
             </div>
           </div>
