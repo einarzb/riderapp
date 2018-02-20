@@ -63,5 +63,6 @@ export class RidesComponent implements OnInit {
     this.rides[index].isSelected = {
       "background-color": this.rides[index].zone.color
     };
+    this.rides[index].
   }
 }

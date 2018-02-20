@@ -5,7 +5,7 @@
         class="form-control" name="pin" #ridePin="ngModel" placeholder="&nbsp;#pin" required>
       <button (click)="submitForm()" class="myBtn" *ngIf="subBtn">submit</button>
     </div>
-    <div class="row invalid-feedback input-group mt-2" [hidden]="!ridePin.errors?.required"> PIN number is required </div>
+    <div class="row invalid-feedback input-group mt-2" [hidden]="!ridePin.errors?.required"> PIN number is required (e.g JN-0001-0001-CC) </div>
   </div>
   <h5 *ngIf="parkClosed"> We are closed. You are welcome to enjoy our service starting 9:00 AM</h5>
 
